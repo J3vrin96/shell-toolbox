@@ -41,7 +41,7 @@ To begin using the scripts in this repository, follow these steps:
 	To use the `empty` command conveniently from anywhere, declare an alias in your shell configuration file (`.bashrc` or `.zshrc`), depending on your shell and where the repository is located on your machine. For example:
 	```sh
 	# MacBook
-	alias empty="$HOME/scripts/empty.sh"
+	alias empty="$HOME/shell-toolbox/empty.sh"
 	```
 	After adding the alias, reload your shell configuration or restart your terminal session.
 
