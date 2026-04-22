@@ -12,8 +12,8 @@ To begin using the scripts in this repository, follow these steps:
 
 1. **Clone the repository:**
 	```sh
-	git clone <repository-url>
-	cd scripts
+	git clone https://github.com/J3vrin96/shell-toolbox.git
+	cd shell-toolbox
 	```
 
 2. **Review available scripts:**
