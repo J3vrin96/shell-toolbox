@@ -25,13 +25,12 @@ To begin using the scripts in this repository, follow these steps:
 ## Script: `empty.sh`
 ### Prerequisites
 
-1. **Environment Variables:**
-	Before running `empty.sh`, define two environment variables according to your folder structure:
+1. **Local config file:**
+	Copy the provided template and fill in your own paths:
 	```sh
-	BIN_PATH=
-	DOWNLOAD_PATH=
+	cp config.sh.example config.sh
 	```
-	**Example:**
+	Then edit `config.sh` (it is git-ignored and will never be committed):
 	```sh
 	BIN_PATH="$HOME/.Trash"
 	DOWNLOAD_PATH="$HOME/Downloads"

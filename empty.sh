@@ -1,10 +1,18 @@
 #!/bin/bash
 
-BIN_PATH=
-DOWNLOAD_PATH=
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CONFIG_FILE="$SCRIPT_DIR/config.sh"
+
+if [ ! -f "$CONFIG_FILE" ]; then
+	echo -e "\033[31m[ERROR] config.sh not found. Copy config.sh.example to config.sh and fill in your paths.\033[0m"
+	exit 1
+fi
+
+source "$CONFIG_FILE"
+
 CURRENT_WORKING_DIRECTORY=$(pwd)
 
-emptyFolder() {
+empty() {
 	echo "---------------------------"
 	echo -e "\033[96mSTART - EMPTY FOLDER SCRIPT\033[0m"
 	echo -e "---------------------------\n"
@@ -22,6 +30,11 @@ emptyFolder() {
 			echo -e "\033[31m[ERROR] INVALID ARGUMENT(S) -> EXITING\033[0m\n"
 			exit 1
 	esac
+
+	if [ -z "$FOLDER_PATH" ]; then
+		echo -e "\033[31m[ERROR] INVALID FOLDER_PATH -> EXITING\033[0m\n"
+		exit 1
+	fi
 
 	echo -e "\033[34m[INFO] EMPTYING $FOLDER_PATH\033[0m\n"
 
@@ -51,4 +64,4 @@ emptyFolder() {
 	exit 0
 }
 
-emptyFolder $1
+empty $1
