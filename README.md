@@ -22,6 +22,25 @@ To begin using the scripts in this repository, follow these steps:
 3. **Follow script-specific setup:**
 	Each script may have its own prerequisites or setup steps. Refer to the documentation for each script (see below) before running.
 
+## Script: `interactive-git-checkout.sh`
+### Prerequisites
+
+- Bash and Git must be installed.
+- Run the script from inside a Git repository with local branches.
+- Use an interactive terminal so you can choose from the branch menu.
+
+### Usage
+
+From the repository containing the script, run:
+
+```sh
+bash interactive-git-checkout.sh
+```
+
+The script displays local branches, with the most recently committed branch first. Enter the number next to a branch to check it out. If you enter an invalid selection, the menu remains available; press `Ctrl+C` to cancel.
+
+---
+
 ## Script: `empty.sh`
 ### Prerequisites
 
@@ -39,7 +58,7 @@ To begin using the scripts in this repository, follow these steps:
 2. **Alias Declaration:**
 	To use the `empty` command conveniently from anywhere, declare an alias in your shell configuration file (`.bashrc` or `.zshrc`), depending on your shell and where the repository is located on your machine. For example:
 	```sh
-	# MacBook
+	# .zshrc file
 	alias empty="$HOME/shell-toolbox/empty.sh"
 	```
 	After adding the alias, reload your shell configuration or restart your terminal session.
